@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Slow Jam Society — Flyer</title>
+<title>Chemistry Lab — R&B Speed Dating · Rotterdam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -140,26 +140,26 @@
     margin-bottom: 22px;
   }
 
-  .hero-line-1 {
+  .hero-single {
     font-family: 'Bodoni Moda', serif;
     font-weight: 500;
-    font-size: 88px;
-    letter-spacing: -0.02em;
-    line-height: 0.95;
+    font-size: 76px;
+    letter-spacing: 0.01em;
+    line-height: 1;
     color: var(--text-cream);
     text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    white-space: nowrap;
   }
-
-  .hero-line-2 {
+  .hero-single .amp {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-weight: 300;
-    font-size: 96px;
-    letter-spacing: -0.01em;
-    line-height: 0.9;
     color: var(--accent-gold);
-    margin-top: -8px;
-    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    font-weight: 300;
+    font-size: 88px;
+    margin: 0 0.08em;
+    letter-spacing: 0;
+    vertical-align: -0.02em;
   }
 
   /* Decorative ornament */
@@ -352,6 +352,80 @@
   .corner-bl { bottom: 30px; left: 30px; border-bottom: 1px solid var(--accent-gold); border-left: 1px solid var(--accent-gold); opacity: 0.4; }
   .corner-br { bottom: 30px; right: 30px; border-bottom: 1px solid var(--accent-gold); border-right: 1px solid var(--accent-gold); opacity: 0.4; }
 
+
+
+  /* === Chemistry Lab v5 layout additions === */
+  .edition-top {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: var(--accent-gold);
+    text-align: center;
+    opacity: 0.85;
+    margin: 0;
+  }
+  .spacer-1 { height: 200px; }
+  .spacer-2 { height: 180px; }
+  .hero-event {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 500;
+    font-size: 54px;
+    letter-spacing: 0.025em;
+    line-height: 1;
+    color: var(--text-cream);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 30px 0;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    white-space: nowrap;
+  }
+  .brought-by {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    color: var(--accent-rose);
+    text-align: center;
+    margin: 0 0 6px 0;
+    opacity: 0.75;
+    text-transform: lowercase;
+  }
+  .brand-mark {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .content { padding: 65px 55px 55px; }
+  .ornament { margin: 0 0 22px; }
+  .slogan { font-size: 24px; margin-bottom: 10px; }
+  .description { margin-bottom: 38px; font-size: 11px; }
+  .details { padding: 18px 0; margin-bottom: 28px; gap: 30px; }
+  .detail-main { font-size: 26px; margin-bottom: 4px; }
+  .detail-sub { font-size: 13px; }
+  .vertical-divider { height: 50px; }
+  .location { margin-bottom: 22px; }
+  .location-name { font-size: 30px; }
+  .location-city { font-size: 15px; }
+  .footer { padding-top: 16px; }
+
+  /* Mobile: scale flyer down to fit viewport */
+  @media (max-width: 900px) {
+    .flyer { transform: scale(0.55); transform-origin: top center; }
+    body { padding: 10px !important; }
+  }
+  @media (max-width: 500px) {
+    .flyer { transform: scale(0.42); transform-origin: top center; }
+  }
+
 </style>
 </head>
 <body>
@@ -366,13 +440,12 @@
     <div class="corner corner-br"></div>
 
     <div class="content">
-      <div class="tagline">A Hip Hop &amp; R&amp;B Dating Experience</div>
-      <div class="edition">— Rotterdam Edition —</div>
-
-      <div class="hero">
-        <div class="hero-line-1">SMOOTH</div>
-        <div class="hero-line-2">Operators</div>
-      </div>
+      <div class="edition-top">— Rotterdam Edition —</div>
+      <div class="spacer-1"></div>
+      <div class="hero-event">R&amp;B Speed Dating</div>
+      <div class="brought-by">brought to you by</div>
+      <div class="brand-mark">Chemistry Lab</div>
+      <div class="spacer-2"></div>
 
       <div class="ornament">
         <span class="line"></span>
@@ -392,8 +465,8 @@
         <div class="vertical-divider"></div>
         <div class="detail-block">
           <div class="detail-label">Time</div>
-          <div class="detail-main">20:00 — 23:00</div>
-          <div class="detail-sub">Doors open at 19:30</div>
+          <div class="detail-main">21:00 — 00:00</div>
+          <div class="detail-sub">Doors open at 20:30</div>
         </div>
       </div>
 
@@ -405,7 +478,7 @@
 
       <div class="footer">
         <div class="footer-left">29+</div>
-        <div class="footer-center">Dress to Impress</div>
+        <div class="footer-center">Dresscode. Confident.</div>
         <div class="footer-right">Limited Tickets</div>
       </div>
     </div>
