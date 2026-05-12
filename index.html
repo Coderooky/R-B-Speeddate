@@ -762,6 +762,75 @@ img { max-width: 100%; display: block; }
 .hero-brand-mark { display: block !important; margin: 14px 0 8px 0 !important; line-height: 1 !important; }
 .title-line-2 { display: block !important; margin-top: 0 !important; line-height: 1 !important; font-size: clamp(28px, 4.5vw, 42px) !important; letter-spacing: 0.04em !important; }
 
+
+/* Flyer showcase polish + mobile improvements */
+.flyer-showcase { padding: 80px 0 90px !important; }
+.flyer-showcase .container { max-width: 760px; padding: 0 24px; }
+.flyer-showcase img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,118,0.15);
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+.flyer-showcase img:hover { transform: scale(1.02); }
+.flyer-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent-rose);
+  margin-top: 28px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+/* Add section eyebrow above flyer */
+.flyer-showcase::before {
+  content: 'The Print';
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent-rose);
+  text-align: center;
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+
+/* Mobile improvements */
+@media (max-width: 900px) {
+  .hero { padding: 100px 16px 50px !important; min-height: auto !important; }
+  .hero-title { line-height: 1.1 !important; }
+  .title-line-1 { font-size: clamp(34px, 8vw, 56px) !important; margin-bottom: 14px !important; }
+  .hero-brand-mark { font-size: 11px !important; margin: 10px 0 6px !important; }
+  .title-line-2 { font-size: clamp(22px, 6vw, 36px) !important; }
+  .hero-slogan { font-size: 18px !important; padding: 0 12px; }
+  .hero-tags { font-size: 10px !important; letter-spacing: 0.22em !important; padding: 0 12px; }
+  .hero-meta { padding: 24px 0 !important; }
+  .meta-value { font-size: 22px !important; }
+  .meta-value-italic { font-size: 22px !important; }
+  .flyer-showcase { padding: 50px 0 60px !important; }
+  .flyer-showcase img { max-width: 100%; }
+  .flyer-showcase::before { font-size: 10px; letter-spacing: 0.32em; }
+}
+@media (max-width: 480px) {
+  .title-line-1 { font-size: clamp(28px, 9vw, 42px) !important; }
+  .title-line-2 { font-size: clamp(20px, 7vw, 30px) !important; }
+  .meta-value { font-size: 20px !important; }
+  .hero-slogan { font-size: 16px !important; }
+  .section-title { font-size: clamp(28px, 7vw, 40px) !important; }
+  .expect-card { padding: 24px 18px !important; }
+  .expect-card h3 { font-size: 18px !important; }
+  .expect-card p { font-size: 15px !important; }
+  .dress-code h3 { font-size: 22px !important; }
+  .dress-code p { font-size: 16px !important; }
+  .faq-item summary { font-size: 16px !important; }
+  .faq-item p { font-size: 15px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -825,7 +894,7 @@ img { max-width: 100%; display: block; }
         </div>
       </div>
 
-      <a href="#tickets" class="btn-primary">Get Your Ticket</a>
+      <a href="https://tix.qualino.net/events/checkout/97943f1fe4a041c593386d25a6cd104f" class="btn-primary" target="_blank" rel="noopener">Get Your Ticket</a>
 
       <div class="hero-scroll">
         <span>Scroll</span>
@@ -991,14 +1060,14 @@ img { max-width: 100%; display: block; }
         <span class="line"></span><span class="dot"></span><span class="line"></span>
       </div>
 
-      <p class="tickets-text">Tickets drop soon. Limited availability — when they're gone, they're gone.</p>
+      <p class="tickets-text">Limited availability — when they're gone, they're gone.</p>
 
       <!-- TICKETING PLACEHOLDER:
            When you have an Eventix / Eventbrite link or embed,
            replace the button below with their embed code or update the href. -->
-      <a href="#" class="btn-primary btn-large disabled" aria-disabled="true">Tickets Coming Soon</a>
+      <a href="https://tix.qualino.net/events/checkout/97943f1fe4a041c593386d25a6cd104f" class="btn-primary btn-large" target="_blank" rel="noopener">Get Your Tickets</a>
 
-      <p class="tickets-note">Want to be the first to know? Follow us on Instagram for the drop.</p>
+      <p class="tickets-note">Secured by Qualino · iDEAL & creditcard accepted.</p>
     </div>
   </section>
 
